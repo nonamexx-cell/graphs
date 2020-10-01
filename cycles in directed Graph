@@ -35,6 +35,7 @@ void dfs(vector<vector<int>> &edges,vector<int> &vis,int x)
              dfs(edges,vis,p);
          }
     }
+    st.pop();
     vis[x] = 2; 
 }
 int  main()
