@@ -9,7 +9,6 @@ int flag = 0;
 int n = 0;
 void dfs(vector<vector<int>> &edges,vector<int> &vis,int x)
 {
- 
    /* for(int i=0;i<n;i++)
     {
         cout<<vis[i]<<" ";
