@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
+vector<int> assign(100,0);
 void dfs(int x,vector<vector<int>> &edges,vector<int> &val,vector<int> &par)
 {
    for(auto y : edges[x])
@@ -10,6 +10,7 @@ void dfs(int x,vector<vector<int>> &edges,vector<int> &val,vector<int> &par)
        {
            par[y] = x;
            val[y] = val[x]+1;
+           assign[y] = assign[x]+1;
            dfs(y,edges,val,par);
        }
    if (y != par[x])
@@ -48,6 +49,7 @@ int main()
        //cout<<i<<" "<<par[i]<<endl;
        if(val[par[i]] < val[i])
        {
+           if(assign[i] == val[i])
            cout<<i<<" "<<par[i]<<endl;
        }
    }
