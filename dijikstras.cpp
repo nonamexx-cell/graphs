@@ -21,9 +21,15 @@ int mindis(vector<int> &ans,vector<bool> &vis)
 }
 void call(vector<int> &ans,vector<vector<int>> &edges)
 {
-      
+    
+   // Dijikstras Algorithm
+   // complexity O(n^2)
+   // donot work for negative edges
+   // Algo to find minimum distance between source vertex to all other vertices
+   
      vector<bool> vis(false);  // visited array to note covered points
   
+    
   
     for(int j=0;j<n;j++) // sufficient to run n times. on every iteration we get one vertex
     {
